@@ -5,7 +5,6 @@ library;
 import 'package:flutter/material.dart';
 
 import '../../core/format.dart';
-import '../app.dart';
 
 class OfflineReportSheet extends StatefulWidget {
   const OfflineReportSheet({super.key, required this.seconds, required this.amount, required this.totalAssets, required this.themeUpColor, required this.themeGoldColor});
@@ -67,7 +66,6 @@ class _OfflineReportSheetState extends State<OfflineReportSheet>
 
   @override
   Widget build(BuildContext context) {
-    final MarketColors m = context.market;
     return AnimatedBuilder(
       animation: _ctl,
       builder: (BuildContext context, Widget? _) {

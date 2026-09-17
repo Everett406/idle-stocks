@@ -5,7 +5,6 @@ library;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../core/constants.dart';
 import '../core/format.dart';
 import '../engine/game_state.dart';
 import '../engine/prestige.dart';
@@ -20,7 +19,6 @@ class GrowthPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final MarketColors m = context.market;
     return AnimatedBuilder(
       animation: game,
       builder: (BuildContext context, Widget? _) {
@@ -109,7 +107,6 @@ class _UpgradeRow extends StatelessWidget {
     final bool maxed = lv >= max;
     final double cost = upgradeNextCost(id, lv);
     final bool canBuy = !maxed && game.cash >= cost;
-    final MarketColors m = context.market;
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 6),
       padding: const EdgeInsets.all(12),

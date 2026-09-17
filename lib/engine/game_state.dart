@@ -194,7 +194,7 @@ class GameState extends ChangeNotifier {
     _rng = math.Random();
     _ticker = MarketTicker(normal: _normal);
     _eventEngine = EventEngine(rng: _rng);
-    _taskSystem = TaskSystem(rng: _rng);
+    _taskSystem = TaskSystem();
 
     _upgrades = <UpgradeId, int>{
       for (final UpgradeId id in UpgradeId.values) id: 0,

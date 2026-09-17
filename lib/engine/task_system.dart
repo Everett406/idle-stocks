@@ -8,8 +8,7 @@ import '../core/constants.dart';
 import '../models/task.dart';
 
 class TaskSystem {
-  TaskSystem({required math.Random rng}) : _rng = rng;
-  final math.Random _rng;
+  TaskSystem();
 
   /// 若跨天或首次启动，生成 3 个新任务。
   List<DailyTask> ensureDailyTasks({

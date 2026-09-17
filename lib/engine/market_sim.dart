@@ -2,7 +2,6 @@
 /// 单只股票的价格 tick：先按当前 mu / sigma GBM，再叠加事件 boost 与夜盘效果。
 library;
 
-import '../core/constants.dart';
 import '../core/gbm.dart';
 import '../models/market_event.dart';
 import '../models/stock.dart';
