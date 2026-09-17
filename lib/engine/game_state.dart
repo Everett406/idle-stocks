@@ -295,10 +295,11 @@ class GameState extends ChangeNotifier {
     final dynamic rawStocks = data['stocks'];
     if (rawStocks is Map) {
       rawStocks.forEach((dynamic k, dynamic v) {
-        final String? code = k is String ? k : null;
-        final StockSeed? seed = code == null ? null : _seedByCode[code];
-        if (seed != null && v is Map<String, dynamic>) {
-          _stocks[code] = LiveStock.fromJson(code, seed.initialPrice, v);
+        if (k is String && v is Map<String, dynamic>) {
+          final StockSeed? seed = _seedByCode[k];
+          if (seed != null) {
+            _stocks[k] = LiveStock.fromJson(k, seed.initialPrice, v);
+          }
         }
       });
     }
