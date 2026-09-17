@@ -1,0 +1,47 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ / Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/
+.gradle/
+local.properties
+captures/
+.externalNativeBuild
+.cxx/
+
+# VS Code
+.vscode/
+
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+.flutter-version
+fvm/
+
+# Symbols / app secrets
+android/app/**/key.jks
+android/key.properties
+**/*.jks
+
+# Linux / Windows junk
+*~
+Thumbs.db
+ehthumbs.db
+Desktop.ini
