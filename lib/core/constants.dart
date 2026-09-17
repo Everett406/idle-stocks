@@ -4,6 +4,8 @@ library;
 
 import 'package:flutter/material.dart';
 
+import '../models/stock.dart';
+
 // ───────────────────────── 时间 / 节奏 ─────────────────────────
 const Duration kTickInterval = Duration(seconds: 1);
 const Duration kDividendInterval = Duration(seconds: 5);
@@ -57,27 +59,7 @@ class AppColors {
 }
 
 // ───────────────────────── 股票参数表 ─────────────────────────
-class StockSeed {
-  const StockSeed({
-    required this.code,
-    required this.name,
-    required this.sector,
-    required this.initialPrice,
-    required this.dailyDrift,
-    required this.dailyVol,
-    required this.dailyDivRate,
-    required this.unlockAt,
-  });
-
-  final String code;
-  final String name;
-  final String sector;
-  final double initialPrice;
-  final double dailyDrift; // 例 0.0015 = 0.15%
-  final double dailyVol; // 例 0.012 = 1.2%
-  final double dailyDivRate; // 例 0.0025 = 0.25%/天
-  final double unlockAt; // 总资产阈值
-}
+// StockSeed 定义见 lib/models/stock.dart。
 
 const List<StockSeed> kStockSeeds = <StockSeed>[
   StockSeed(code: 'XCBK', name: '星辰银行', sector: '金融', initialPrice: 12.50, dailyDrift: 0.0015, dailyVol: 0.012, dailyDivRate: 0.0025, unlockAt: 0),

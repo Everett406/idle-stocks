@@ -577,6 +577,8 @@ class GameState extends ChangeNotifier {
         case TaskKind.holdRising:
           if (anyRising) t.progress = t.target;
           break;
+        default:
+          break;
       }
     }
     maxToday; // (silence lints)

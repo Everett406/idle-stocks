@@ -29,7 +29,7 @@ class PortfolioPage extends StatelessWidget {
             _Header(game: game, totalAssets: assets, pnl: pnl),
             const Divider(height: 1),
             Expanded(
-              child: _buildList(game, m),
+              child: _buildList(context, game, m),
             ),
           ],
         );
@@ -37,7 +37,7 @@ class PortfolioPage extends StatelessWidget {
     );
   }
 
-  Widget _buildList(GameState game, MarketColors m) {
+  Widget _buildList(BuildContext context, GameState game, MarketColors m) {
     final List<StockSeed> ownedSeeds = <StockSeed>[];
     for (final StockSeed s in game.seeds) {
       if ((game.holdings[s.code]?.shares ?? 0) > 0) ownedSeeds.add(s);

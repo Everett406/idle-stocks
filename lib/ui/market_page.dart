@@ -12,6 +12,7 @@ import 'app.dart';
 import 'stock_detail_page.dart';
 import 'widgets/event_banner.dart';
 import 'widgets/sparkline.dart';
+import 'widgets/ticker_tape.dart';
 
 class MarketPage extends StatefulWidget {
   const MarketPage({super.key, required this.game});
