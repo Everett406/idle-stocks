@@ -1,9 +1,9 @@
----
 
 > [!NOTE]
 > **本仓库已迁移至 Gitee**：<https://gitee.com/Everett5678/idle-stocks>
 > GitHub 端仅作只读归档，新代码请推送到 Gitee。
 
+---
 # 股海大亨 (Idle Stocks)
 
 > 24 小时持续运转的虚拟股市放置手游。
